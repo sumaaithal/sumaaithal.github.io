@@ -2588,26 +2588,28 @@ input, select, textarea {
 
 /* Image */
 	
-	/* 1. Force the image container to be dead-center, overriding any parent constraints */
-		.image_suma {
+	.image_suma {
 		display: flex !important;
 		justify-content: center !important;
 		align-items: center !important;
+		
+		/* Break out of any narrow parent containers */
 		width: 100% !important;
-		max-width: 100% !important;
-		margin: 20px auto !important;
-		transform: none !important;
+		
+		/* Use absolute centering relative to its layout box */
 		position: relative !important;
-		left: 0 !important;
-		right: 0 !important;
+		left: 50% !important;
+		transform: translateX(-50%) !important;
+		
+		margin-top: 20px !important;
+		margin-bottom: 20px !important;
 		}
 
-		/* 2. Ensure the image itself doesn't have weird margins */
 		.image_suma img {
+		display: block !important;
 		max-width: 100%;
 		height: auto;
-		display: block !important;
-		margin: 0 auto !important;
+		margin: 0 !important;
 		}
 
 		.image {
