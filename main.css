@@ -2588,25 +2588,9 @@ input, select, textarea {
 
 /* Image */
 	
-	/*.image_suma{
+	.image_suma{
 		left: 40%;
 		position: relative;
-	}*/
-
-	.image_suma {
-	display: flex !important;
-	justify-content: center !important;
-	margin: 0 auto !important;
-	position: static !important; /* Disables absolute/relative positioning */
-	float: none !important;      /* Disables floating */
-	}
-
-	.image_suma img {
-	display: block !important;
-	margin: 0 auto !important;
-	position: static !important;
-	float: none !important;
-	max-width: 100%;
 	}
 
 		.image {
