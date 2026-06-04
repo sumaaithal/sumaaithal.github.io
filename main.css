@@ -2588,9 +2588,21 @@ input, select, textarea {
 
 /* Image */
 	
-	.image_suma{
+	/*.image_suma{
 		left: 40%;
 		position: relative;
+	}*/
+
+	.image_suma {
+	display: flex;
+	justify-content: center; /* Centers horizontally */
+	align-items: center;     /* Centers vertically (if the container has a height) */
+	}
+
+	/* Optional: Ensures the image scales nicely */
+	.image_suma img {
+	max-width: 100%;
+	height: auto;
 	}
 	.image {
 		border: 0;
