@@ -2588,10 +2588,28 @@ input, select, textarea {
 
 /* Image */
 	
-	.image_suma{
-		left: 40%;
-		position: relative;
-	}
+	.image_suma {
+		/* 1. Clear out the old positioning bugs */
+		left: 0; 
+		position: static; 
+		
+		/* 2. Center it cleanly using block margins */
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		
+		/* 3. Give the container a defined width so 'margin: auto' knows how to center it */
+		width: fit-content; 
+		text-align: center;
+		}
+
+		/* 4. Ensure the image inside scales beautifully */
+		.image_suma img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+		margin: 0 auto;
+		}
 
 		.image {
 			border: 0;
