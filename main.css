@@ -2593,17 +2593,34 @@ input, select, textarea {
 		position: relative;
 	}*/
 
-	.image_suma {
+	/* 1. The outer wrapper that takes up the full width */
+	.profile-container {
 	display: flex;
 	justify-content: center; /* Centers horizontally */
-	align-items: center;     /* Centers vertically (if the container has a height) */
+	align-items: center;     /* Centers vertically */
+	width: 100%;
+	padding: 40px 0;         /* Adds nice breathing room below the nav bar */
+	box-sizing: border-box;
 	}
 
-	/* Optional: Ensures the image scales nicely */
-	.image_suma img {
-	max-width: 100%;
-	height: auto;
+	/* 2. The image wrapper div */
+	.image_suma {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* If you want a specific size for the image container, you can set it here: */
+	width: 300px;            
+	height: 300px;
 	}
+
+	/* 3. Making sure the image itself scales perfectly inside that div */
+	.image_suma img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;       /* Ensures your circular crop doesn't distort */
+	border-radius: 50%;      /* Keeps it a perfect circle if it's cropped that way */
+	}
+	
 	.image {
 		border: 0;
 		display: inline-block;
